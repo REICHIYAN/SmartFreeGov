@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Environment / secrets
+.env
+.env.*
+*.key
+keys/*.json
+*.pem
+
+# Embedding cache / prompt logs
+*.json
+data/embedding_cache.json
+data/generated_prompt.txt
+data/top_k_result.json
+data/generated_answer.txt
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+.envrc
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Logs / debug
+*.log
+
+# VSCode / JetBrains IDE
+.vscode/
+.idea/
+
+# Test artifacts
+coverage/
+htmlcov/
+.pytest_cache/

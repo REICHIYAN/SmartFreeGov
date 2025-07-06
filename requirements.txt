@@ -1,0 +1,7 @@
+pandas
+sentence-transformers
+google-cloud-bigquery
+numpy>=1.21.0        # embedding_cache.json変換で使う可能性あり
+python-dotenv        # .env読み込み用（CI/CD用意識）
+openai>=1.0.0  # ChatGPT API呼び出し用
+pyarrow>=10.0.0

@@ -1,0 +1,14 @@
+graph TD
+  A[ユーザー入力（自然文）]
+  A --> B[Embedding生成（MiniLM）]
+  B --> C[BigQueryで類似FAQ検索]
+  C --> D[Top-K FAQ抽出]
+  D --> E[Prompt生成（prompt_gen.py）]
+  E --> F[LLM応答（ChatGPT UIに貼り付け）]
+  C --> G[BigQueryログ出力]
+  G --> H[Looker Studio KPI可視化]
+
+  subgraph GitHub Actions
+    I[FAQ CSV再読み込み → embedding更新]
+  end
+  I --> B
