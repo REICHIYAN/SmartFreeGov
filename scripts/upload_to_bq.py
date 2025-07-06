@@ -19,7 +19,7 @@ client = bigquery.Client(project=project_id)
 
 try:
     # CSVファイル読み込み
-    df = pd.read_csv("data/faq_sample.csv")
+    df = pd.read_csv("data/faq_sample_with_embedding.csv")
     
     # DataFrame → BigQuery
     job = client.load_table_from_dataframe(df, table_id)

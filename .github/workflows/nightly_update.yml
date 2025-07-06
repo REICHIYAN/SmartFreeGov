@@ -2,13 +2,14 @@
 
 name: Nightly FAQ Update
 
-on:
-  schedule:
-    - cron: '0 18 * * *'  # JST 03:00 (UTC 18:00)
-  workflow_dispatch:
+# on:
+#   schedule:
+#     - cron: '0 18 * * *'  # JST 03:00 (UTC 18:00)
+#   workflow_dispatch:
 
 jobs:
   update_embeddings:
+    if: false  # 🚫 停止中
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
